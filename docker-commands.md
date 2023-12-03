@@ -63,4 +63,10 @@ docker-compose down -v	# bring down all anonymous volumes as they'll keep buildi
 docker-compose up -d --build	# rebuild the image
 
 docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d # order matters (base config followed by dev or prod)
+
+# Inside mongo image bash shell
+mongosh # mongo shell is removed, hence use this command instead for an REPL.
+db # print db currenty using
+use dbname # creates and uses new db dbname
+show dbs # until something is added to the db, the new db won't show up here.
 ```
