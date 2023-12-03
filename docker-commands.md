@@ -61,4 +61,6 @@ docker-compose down
 docker-compose down -v	# bring down all anonymous volumes as they'll keep building up otherwise
 
 docker-compose up -d --build	# rebuild the image
+
+docker-compose -f docker-compose.yml -f docker-compose.dev.yml up -d # order matters (base config followed by dev or prod)
 ```
